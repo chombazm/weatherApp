@@ -6,3 +6,12 @@ export const colors = {
   primary: '#FFD809',
   secondary: '#B9F6EE',
 };
+
+export const colorModes = {
+  light: {
+    background: colors.light,
+  },
+  dark: {
+    backgroundColor: colors.dark,
+  },
+};

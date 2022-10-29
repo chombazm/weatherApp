@@ -118,7 +118,7 @@ export const MapPin = (props: SvgProps) => (
   <Svg width={24} height={24} fill="none" {...props}>
     <G
       clipPath="url(#a)"
-      stroke="#000"
+      stroke="#fff"
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round">
