@@ -28,7 +28,6 @@ export const HomeScreen = () => {
             },
           }),
         }}>
-        {/* <MainHeader /> */}
         <HeroComp />
 
         <StatsLabel currentStats={currentStats} />
