@@ -1,4 +1,5 @@
 import { View, Text, SafeAreaView, ImageBackground } from 'react-native';
+import { ColumnContainer } from '../../components/ColumnContainer';
 import { MainHeader } from '../../components/Header';
 import { HeroComp } from '../../components/HeroComp';
 import { StatsLabel } from '../../components/StatsLabel';
@@ -8,10 +9,12 @@ export const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={{ paddingHorizontal: 30 }}>
-        <MainHeader />
+        {/* <MainHeader /> */}
         <HeroComp />
 
         <StatsLabel />
+
+        <ColumnContainer />
       </View>
     </SafeAreaView>
   );
