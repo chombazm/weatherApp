@@ -1,6 +1,6 @@
 import { StyleSheet, View, Text, Image } from 'react-native';
 import { colors } from '../../assets/colors';
-const heroImage = require('../../assets/images/Sun-cloud-angled-rain2.png');
+const heroImage = require('../../assets/images/Sun-cloud-angled-rain.png');
 
 export const HeroComp = () => {
   return (
