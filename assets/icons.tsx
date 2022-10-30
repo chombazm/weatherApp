@@ -23,6 +23,19 @@ export const LoactionPin = (props: Props) => (
     />
   </Svg>
 );
+export const Calender = (props: Props) => (
+  <Svg
+    width={20}
+    height={20}
+    fill="none"
+    // xmlns="http://www.w3.org/2000/svg"
+    {...props}>
+    <Path
+      d="M15 2h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h4V0h2v2h6V0h2v2Zm3 6V4h-3v2h-2V4H7v2H5V4H2v4h16Zm0 2H2v8h16v-8ZM4 12h5v4H4v-4Z"
+      fill="#fff"
+    />
+  </Svg>
+);
 export const Rain = (props: Props) => (
   <Svg width={25} height={24} fill="none" {...props}>
     <Path

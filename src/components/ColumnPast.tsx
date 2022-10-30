@@ -1,51 +1,43 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import { colors } from '../../assets/colors';
-import { CloudMoon, CloudSun } from '../../assets/icons';
+import { Calender } from '../../assets/icons';
+const RainDrops = require('../../assets/images/Big-rain-drops.png');
+const CloudLightning = require('../../assets/images/cloud-lightning.png');
 
-export const ColumnContainer = () => {
+export const ColumnPast = () => {
   return (
     <View style={styles.container}>
       <View style={styles.tranparentFX} />
 
       <View style={styles.header}>
         <View style={styles.flexRow}>
-          <Text style={styles.textMain}>Today</Text>
-          <Text style={styles.textMainSub}>Oct, 30</Text>
+          <Text style={styles.textMain}>Next Forecast</Text>
+          {/* <Text style={styles.textMainSub}>Oct, 30</Text> */}
+          <Calender />
         </View>
-        <View style={styles.flexRow}>
-          <View style={styles.timeSat}>
-            <View style={styles.flexInside}>
-              <Text style={styles.mdText}>31 °C</Text>
-              <CloudSun />
-              <Text style={styles.mdText}>15:00</Text>
+        <View style={styles.flexCol}>
+          <View style={styles.colSubs}>
+            <Text style={styles.textMainSub}>Monday</Text>
+            <Image source={RainDrops} />
+            <View style={styles.flexInsideCol}>
+              <Text style={styles.mxText}>
+                31 <Text style={{ fontSize: 10 }}>°C</Text>
+              </Text>
+              <Text style={[styles.mxText, { opacity: 0.4 }]}>
+                10 <Text style={{ fontSize: 10 }}>°C</Text>
+              </Text>
             </View>
           </View>
-
-          <View style={styles.timeSat}>
-            <View style={styles.flexInside}>
-              <Text style={styles.mdText}>30 °C</Text>
-              <CloudSun />
-              <Text style={styles.mdText}>16:00</Text>
-            </View>
-          </View>
-
-          <View
-            style={[
-              styles.timeSat,
-              { borderColor: colors.light, borderWidth: 1 },
-            ]}>
-            <View style={styles.flexInside}>
-              <Text style={styles.mdText}>28 °C</Text>
-              <CloudMoon />
-              <Text style={styles.mdText}>17:00</Text>
-            </View>
-          </View>
-
-          <View style={styles.timeSat}>
-            <View style={styles.flexInside}>
-              <Text style={styles.mdText}>28 °C</Text>
-              <CloudSun />
-              <Text style={styles.mdText}>18:00</Text>
+          <View style={styles.colSubs}>
+            <Text style={styles.textMainSub}>Tuesday</Text>
+            <Image source={CloudLightning} resizeMode="contain" />
+            <View style={styles.flexInsideCol}>
+              <Text style={styles.mxText}>
+                31 <Text style={{ fontSize: 10 }}>°C</Text>
+              </Text>
+              <Text style={[styles.mxText, { opacity: 0.4 }]}>
+                10 <Text style={{ fontSize: 10 }}>°C</Text>
+              </Text>
             </View>
           </View>
         </View>
@@ -55,6 +47,28 @@ export const ColumnContainer = () => {
 };
 
 const styles = StyleSheet.create({
+  flexInsideCol: {
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  flexCol: {
+    width: '100%',
+    // display: 'flex',
+    marginTop: 20,
+    // flexDirection: 'row',
+    // backgroundColor: 'red',
+  },
+  colSubs: {
+    // width: '25%',
+    // height: 100,
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    // backgroundColor: 'lavender',
+    marginTop: 10,
+    alignItems: 'center',
+  },
   container: {
     display: 'flex',
     flexDirection: 'row',
@@ -62,7 +76,7 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     width: '100%',
     height: 200,
-    marginTop: 20,
+    marginTop: 100,
     paddingTop: 20,
     position: 'relative',
     // backgroundColor: 'lavender',
@@ -70,7 +84,7 @@ const styles = StyleSheet.create({
   tranparentFX: {
     borderRadius: 20,
     width: '100%',
-    height: 270,
+    height: 250,
     backgroundColor: colors.dark,
     opacity: 0.3,
     position: 'absolute',
@@ -134,5 +148,10 @@ const styles = StyleSheet.create({
   mdText: {
     color: colors.light,
     fontSize: 20,
+  },
+  mxText: {
+    color: colors.light,
+    fontSize: 14,
+    marginHorizontal: 5,
   },
 });
