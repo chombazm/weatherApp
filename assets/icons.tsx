@@ -1,132 +1,36 @@
 import * as React from 'react';
-import Svg, { SvgProps, G, Path, Defs, ClipPath } from 'react-native-svg';
+import Svg, { SvgProps, Path, G, Defs, ClipPath } from 'react-native-svg';
 
-export const CloudDrizzle = (props: SvgProps) => (
-  <Svg width={24} height={24} fill="none" {...props}>
-    <G
-      clipPath="url(#a)"
-      stroke="#000"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round">
-      <Path d="M12 21v2M16 19v2M8 19v2M12 15v2M16 13v2M8 13v2M20 16.58A5 5 0 0 0 18 7h-1.26A7.998 7.998 0 0 0 2.063 5.005 8 8 0 0 0 4 15.25" />
-    </G>
-    <Defs>
-      <ClipPath id="a">
-        <Path fill="#fff" d="M0 0h24v24H0z" />
-      </ClipPath>
-    </Defs>
+type Props = {
+  size?: number;
+  color?: string;
+} & SvgProps;
+
+export const LoactionPin = (props: Props) => (
+  <Svg width={21} height={25} fill="none" {...props}>
+    <Path
+      d="m10.125 24.444-7.16-7.16a10.125 10.125 0 1 1 14.32 0l-7.16 7.16Zm5.569-8.75a7.875 7.875 0 1 0-11.138 0l5.569 5.568 5.569-5.568Zm-5.569-3.32a2.25 2.25 0 1 1 0-4.499 2.25 2.25 0 0 1 0 4.5Z"
+      fill="#fff"
+    />
   </Svg>
 );
-
-export const CloudLightning = (props: SvgProps) => (
-  <Svg width={24} height={24} fill="none" {...props}>
-    <G
-      clipPath="url(#a)"
-      stroke="#000"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round">
-      <Path d="M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9" />
-      <Path d="m13 11-4 6h6l-4 6" />
-    </G>
-    <Defs>
-      <ClipPath id="a">
-        <Path fill="#fff" d="M0 0h24v24H0z" />
-      </ClipPath>
-    </Defs>
-  </Svg>
-);
-
-export const CloudSnow = (props: SvgProps) => (
-  <Svg width={24} height={24} fill="none" {...props}>
-    <G
-      clipPath="url(#a)"
-      stroke="#000"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round">
-      <Path d="M12 22h.01M16 20h.01M8 20h.01M12 18h.01M20 17.58A5 5 0 0 0 18 8h-1.26A7.998 7.998 0 0 0 2.063 6.005 8 8 0 0 0 4 16.25M16 16h.01M8 16h.01" />
-    </G>
-    <Defs>
-      <ClipPath id="a">
-        <Path fill="#fff" d="M0 0h24v24H0z" />
-      </ClipPath>
-    </Defs>
-  </Svg>
-);
-
-export const Cloud = (props: SvgProps) => (
-  <Svg width={24} height={24} fill="none" {...props}>
-    <G
-      clipPath="url(#a)"
-      stroke="#000"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round">
-      <Path d="M12 22h.01M16 20h.01M8 20h.01M12 18h.01M20 17.58A5 5 0 0 0 18 8h-1.26A7.998 7.998 0 0 0 2.063 6.005 8 8 0 0 0 4 16.25M16 16h.01M8 16h.01" />
-    </G>
-    <Defs>
-      <ClipPath id="a">
-        <Path fill="#fff" d="M0 0h24v24H0z" />
-      </ClipPath>
-    </Defs>
-  </Svg>
-);
-export const Thermometer = (props: SvgProps) => (
-  <Svg
-    width={24}
-    height={24}
-    fill="none"
-    // xmlns="http://www.w3.org/2000/svg"
-    {...props}>
+export const Notification = (props: Props) => (
+  <Svg width={29} height={27} fill="none" {...props}>
     <G clipPath="url(#a)">
       <Path
-        d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0Z"
-        stroke="#000"
-        strokeWidth={2}
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        d="M5.577 20.25h15.616v-7.84c0-4.369-3.496-7.91-7.808-7.91-4.312 0-7.808 3.541-7.808 7.91v7.84Zm7.808-18c5.544 0 10.039 4.548 10.039 10.16V22.5H3.346V12.41c0-5.612 4.495-10.16 10.039-10.16Zm-2.789 21.375h5.578c0 .746-.294 1.461-.817 1.989a2.777 2.777 0 0 1-1.972.823c-.74 0-1.449-.296-1.972-.823a2.825 2.825 0 0 1-.817-1.99Z"
+        fill="#fff"
       />
     </G>
-    <Defs>
-      <ClipPath id="a">
-        <Path fill="#fff" d="M0 0h24v24H0z" />
-      </ClipPath>
-    </Defs>
-  </Svg>
-);
-export const Sun = (props: SvgProps) => (
-  <Svg width={24} height={24} fill="none" {...props}>
     <Path
-      d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0Z"
-      stroke="#000"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <Path
-      d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
-      stroke="#000"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </Svg>
-);
-export const MapPin = (props: SvgProps) => (
-  <Svg width={24} height={24} fill="none" {...props}>
-    <G
-      clipPath="url(#a)"
+      d="M28.3 7.874c0 2.727-2.189 4.926-4.877 4.926-2.689 0-4.878-2.2-4.878-4.926s2.19-4.925 4.878-4.925 4.878 2.2 4.878 4.925Z"
+      fill="#FF7C7C"
       stroke="#fff"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round">
-      <Path d="M12 21v2M18.36 18.36l1.42 1.42M4.22 19.78l1.42-1.42M21 12h2M1 12h2M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10ZM18.36 5.64l1.42-1.42M4.22 4.22l1.42 1.42M12 1v2" />
-    </G>
+      strokeWidth={1.398}
+    />
     <Defs>
       <ClipPath id="a">
-        <Path fill="#fff" d="M0 0h24v24H0z" />
+        <Path fill="#fff" d="M0 0h26.77v27H0z" />
       </ClipPath>
     </Defs>
   </Svg>

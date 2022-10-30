@@ -1,19 +1,18 @@
 import { View, Text, SafeAreaView, ImageBackground } from 'react-native';
-import { LandingContainer } from '../../components/LandingCard';
+import { MainHeader } from '../../components/Header';
+import { HeroComp } from '../../components/HeroComp';
+import { StatsLabel } from '../../components/StatsLabel';
 import { styles } from './styles';
-const wallPaperImage = require('../../../assets/images/pexels-pixabay-86695.jpg');
 
 export const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <ImageBackground
-        source={{}}
-        resizeMode="cover"
-        style={styles.headerContainer}>
-        <Text style={styles.headerText}>Weather</Text>
-      </ImageBackground>
+      <View style={{ paddingHorizontal: 30 }}>
+        <MainHeader />
+        <HeroComp />
 
-      <LandingContainer />
+        <StatsLabel />
+      </View>
     </SafeAreaView>
   );
 };

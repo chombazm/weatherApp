@@ -4,10 +4,8 @@ import { colors } from '../../../assets/colors';
 export const styles = StyleSheet.create({
   container: {
     width: '100%',
-    height: '100%',
-
-    backgroundColor: colors.dark,
-    padding: 20,
+    minHeight: '100%',
+    backgroundColor: colors.primary,
   },
   headerContainer: {
     width: '100%',
