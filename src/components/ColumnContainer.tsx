@@ -1,8 +1,9 @@
 import { View, Text, StyleSheet } from 'react-native';
 import { colors } from '../../assets/colors';
 import { CloudMoon, CloudSun } from '../../assets/icons';
+import { Reading, Readings } from '../../types';
 
-export const ColumnContainer = () => {
+export const ColumnContainer = ({ currentStats }: Readings) => {
   return (
     <View style={styles.container}>
       <View style={styles.tranparentFX} />
@@ -13,7 +14,10 @@ export const ColumnContainer = () => {
           <Text style={styles.textMainSub}>Oct, 30</Text>
         </View>
         <View style={styles.flexRow}>
-          <View style={styles.timeSat}>
+          {currentStats.map((reading, index) => (
+            <HourlyReading key={index} {...reading} />
+          ))}
+          {/* <View style={styles.timeSat}>
             <View style={styles.flexInside}>
               <Text style={styles.mdText}>31 °C</Text>
               <CloudSun />
@@ -47,13 +51,24 @@ export const ColumnContainer = () => {
               <CloudSun />
               <Text style={styles.mdText}>18:00</Text>
             </View>
-          </View>
+          </View> */}
         </View>
       </View>
     </View>
   );
 };
 
+const HourlyReading = ({ icon, label, value }: Reading) => {
+  return (
+    <View style={styles.timeSat}>
+      <View style={styles.flexInside}>
+        <Text style={styles.mdText}>{value}</Text>
+        {icon}
+        <Text style={styles.mdText}>15:00</Text>
+      </View>
+    </View>
+  );
+};
 const styles = StyleSheet.create({
   container: {
     display: 'flex',

@@ -7,25 +7,26 @@ import {
   Rain,
   Wind,
 } from '../../assets/icons';
+import { Readings, Reading } from '../../types';
 
-export const StatsLabel = () => {
+export const StatsLabel = ({ currentStats }: Readings) => {
   return (
     <View style={styles.container}>
       <View style={styles.tranparentFX} />
       <View style={styles.colBar}>
-        <View style={styles.flexRow}>
-          <Rain />
-          <Text style={styles.scaleReading}>18%</Text>
-        </View>
-        <View style={styles.flexRow}>
-          <Humidity />
-          <Text style={styles.scaleReading}>67%</Text>
-        </View>
-        <View style={styles.flexRow}>
-          <Wind />
-          <Text style={styles.scaleReading}>25km/h</Text>
-        </View>
+        {currentStats.map((reading, index) => (
+          <StatusDisplay key={index} {...reading} />
+        ))}
       </View>
+    </View>
+  );
+};
+
+const StatusDisplay = ({ icon, value }: Reading) => {
+  return (
+    <View style={styles.flexRow}>
+      {icon}
+      <Text style={styles.scaleReading}>{value}</Text>
     </View>
   );
 };

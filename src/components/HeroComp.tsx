@@ -13,7 +13,7 @@ export const HeroComp = () => {
         <Text style={styles.degree}>°C</Text>
       </View>
       <View style={styles.centerBox}>
-        <Text style={styles.subText}>Precipitations</Text>
+        <Text style={styles.subText}>Lusaka</Text>
         <View style={[styles.flexRow, { width: 200 }]}>
           <Text style={styles.subText}>Max: 31 °C</Text>
           <Text style={styles.subText}>Min: 25 °C</Text>
