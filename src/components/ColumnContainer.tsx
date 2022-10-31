@@ -64,7 +64,7 @@ const HourlyReading = ({ icon, label, value }: Reading) => {
       <View style={styles.flexInside}>
         <Text style={styles.mdText}>{value}</Text>
         {icon}
-        <Text style={styles.mdText}>15:00</Text>
+        <Text style={styles.mdText}>{label}</Text>
       </View>
     </View>
   );
